@@ -1,5 +1,4 @@
 call plug#begin('~/.vim/plugged')
-Plug 'morhetz/gruvbox'
 Plug 'ajmwagar/vim-deus'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -8,14 +7,13 @@ Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='gruvbox'
+let g:airline_theme='deus'
 
 syntax enable
-colorscheme gruvbox
+colorscheme deus
 set background=dark
 set t_Co=256
 let g:gruvbox_contrast_dark='medium'
-"colorscheme gruvbox
 
 "Syntastic suggested settings
 "set statusline+=%#warningmsg#
