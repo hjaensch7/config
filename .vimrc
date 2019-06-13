@@ -1,31 +1,33 @@
+
 call plug#begin('~/.vim/plugged')
 Plug 'ajmwagar/vim-deus'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'vim-syntastic/syntastic'
+Plug 'dr-kino/cscope-maps'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'luochen1990/rainbow'
 call plug#end()
 
+"Theme
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='deus'
-
-syntax enable
 colorscheme deus
 set background=dark
 set t_Co=256
 let g:gruvbox_contrast_dark='medium'
 
-"Syntastic suggested settings
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
+"Syntax and Highlighting
+syntax enable
+let g:rainbow_active = 0 "toggle w/ :RainbowToggle
 
-"let g:syntastic_javascript_checkers = ['jshint']
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
+"Connect cscope db and tags db
+cs add ~/src/cscope.out
+set tags=/home/hjaensch/src/tags
 
+"Additional Settings
 set spell
 set number
 set showmatch
