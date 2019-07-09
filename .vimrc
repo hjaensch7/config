@@ -9,6 +9,7 @@ Plug 'dr-kino/cscope-maps'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'luochen1990/rainbow'
+Plug 'w0rp/ale'
 call plug#end()
 
 "Theme
@@ -38,4 +39,4 @@ set softtabstop=4
 set lazyredraw
 set scrolloff=5
 set noswapfile
-
+set shortmess=at
