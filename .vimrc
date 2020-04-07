@@ -1,19 +1,28 @@
 call plug#begin('~/.vim/plugged')
+Plug 'morhetz/gruvbox'
 Plug 'ajmwagar/vim-deus'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'vim-syntastic/syntastic'
+Plug 'udalov/kotlin-vim'
+Plug 'fatih/vim-go'
 call plug#end()
 
+"vim-go Settings
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
+"Airline Settings
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='deus'
+let g:airline_theme='gruvbox'
 
 syntax enable
-colorscheme deus
+colorscheme gruvbox
 set background=dark
 set t_Co=256
 let g:gruvbox_contrast_dark='medium'
+"colorscheme gruvbox
 
 "Syntastic suggested settings
 "set statusline+=%#warningmsg#
@@ -32,7 +41,7 @@ set showmatch
 set incsearch
 set hlsearch
 set tabstop=4
-set softtabstop=4
+"set softtabstop=4
 set lazyredraw
 set scrolloff=5
 set noswapfile

@@ -3,7 +3,9 @@
 
 # Path to your oh-my-zsh installation.
   export ZSH=/home/hank/.oh-my-zsh
-
+  export CLASSPATH=$CLASSPATH:~/Desktop/Course-Work/CSCI_3212/algtest.jar:.
+  export GOPATH=$HOME/Desktop/go
+  PATH="$GOPATH/bin:$PATH"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -58,7 +60,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions golang)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -72,11 +74,11 @@ bindkey '^ ' autosuggest-accept
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='vim'
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
