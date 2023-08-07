@@ -1,0 +1,53 @@
+call plug#begin('~/.vim/plugged')
+Plug 'ajmwagar/vim-deus'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'vim-syntastic/syntastic'
+Plug 'udalov/kotlin-vim'
+Plug 'fatih/vim-go'
+Plug 'airblade/vim-gitgutter'
+
+"   This is for color themes
+Plug 'colepeters/spacemacs-theme.vim'
+Plug 'sainnhe/gruvbox-material'
+Plug 'phanviet/vim-monokai-pro'
+Plug 'flazz/vim-colorschemes'
+Plug 'chriskempson/base16-vim'
+Plug 'gruvbox-community/gruvbox'
+
+" This is for language-specific plugins
+Plug 'plasticboy/vim-markdown'
+Plug 'hashivim/vim-terraform'
+
+call plug#end()
+
+"vim-go Settings
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
+"Airline Settings
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='gruvbox'
+
+" git gutter settings
+" Use fontawesome icons as signs
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '>'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '^'
+let g:gitgutter_sign_modified_removed = '<'
+let g:gitgutter_override_sign_column_highlight = 1
+
+
+syntax enable
+colorscheme gruvbox
+set background=dark
+set t_Co=256
+let g:gruvbox_contrast_dark='medium'
+set incsearch
+set hlsearch
+set lazyredraw
+set scrolloff=5
+
+
